@@ -1,0 +1,7 @@
+{
+  "name": "IosAppEdumium",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
