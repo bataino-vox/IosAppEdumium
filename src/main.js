@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router';
 
 import { IonicVue } from '@ionic/vue';
-import Header from '@/views/layout/Header'
+import Header from '@/layout/Header'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';

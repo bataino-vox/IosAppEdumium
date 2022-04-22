@@ -4,11 +4,11 @@
       <app-header title="Menu" :isMenu="true" />
     </ion-header>
     <ion-content> 
-      <div class="df alm ion-padding-horizontal ion-primary" color="primary">
+      <div class="d-flex align-items-center ion-padding-horizontal ion-primary" color="primary">
           <ion-thumbnail>
-            <img src="''" class=""/>
+            <img src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" class=""/>
           </ion-thumbnail>
-          <div class="ion-padding">
+          <div class="d-flex ion-padding">
             <ion-label class="century ion-padding-end ion-text-wrap ion-text-sm" style="font-size:80%;">
               <b>{{ user.username }}</b>
               <br>

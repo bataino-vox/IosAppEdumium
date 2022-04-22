@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import Tabs from '../views/layout/Tabs.vue'
+import Tabs from '@/layout/Tabs.vue'
 
 const routes = [
   {

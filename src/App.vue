@@ -7,7 +7,7 @@
 
 <script>
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import Menu from '@/views/layout/Menu.vue';
+import Menu from '@/layout/Menu.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

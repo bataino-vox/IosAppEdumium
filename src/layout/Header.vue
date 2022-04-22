@@ -10,6 +10,11 @@
             <ion-icon :icon="menu"></ion-icon>
         </ion-button>
     </ion-buttons>
+    <ion-buttons slot="end" v-if="!isMenu">
+        <ion-button class="text-dark">
+            <Icon icon="clarity:notification-solid" height="20" />
+        </ion-button>
+    </ion-buttons>
     <ion-title class="head text16">
             <b>
                 {{ title }}
@@ -21,6 +26,8 @@
 <script>
 import { IonButtons, IonTitle, IonToolbar, menuController } from '@ionic/vue'
 import {menu, arrowBack} from 'ionicons/icons'
+import { Icon } from '@iconify/vue';
+
 export default {
     name: 'AppHeader',
     props: ['title','isMenu'],
@@ -28,6 +35,7 @@ export default {
         IonButtons,
         IonTitle,
         IonToolbar,
+        Icon
     },
     data(){
         return{
