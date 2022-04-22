@@ -1,8 +1,8 @@
 <template>
 <ion-page>
     <app-header title="Fees" />
-    <ion-content :fullscreen="true" style="--padding-top:100px">
-      <list-component title="Grand Total" class="text-center fixed fixed-top" bodyWidth="90%" height="20" style="padding-top:42px">
+    <ion-content :fullscreen="true" style="--padding-top:" class="">
+      <list-component title="Grand Total" class="text-center fixed " bodyWidth="90%" height="20" style="padding-top:">
         <span class="ms-2">
           Amount<br>
           $56,000

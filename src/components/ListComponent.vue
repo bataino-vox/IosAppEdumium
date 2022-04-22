@@ -1,7 +1,7 @@
 <template>
-<ion-item id="" class="d-block ion-no-padding my-2" lines="full" color="primary">
-    <div class="d-block small mx-0 w-100">
-        <div class="d-flex justify-content-between w-100  ps-2 w-100 mx-0 py-2 small px-1">
+<ion-item id="" class="d-block p-0 m-0 w-100 ion-no-padding my-2" lines="" style="overflow:show" color="">
+    <div class="d-block small mx-0 px-0 w-100" style="min-width:98vw">
+        <div class="d-flex justify-content-between w-100 bg-l-gray ps-2 w-100 mx-0 py-2 small px-1">
             <span>
                 {{ title }}
             </span>
