@@ -7,12 +7,12 @@
     </ion-buttons>
     <ion-buttons slot="start" v-else>
         <ion-button class="icon-only" @click="openSideMenu">
-            <ion-icon :icon="menu"></ion-icon>
+            <ion-icon :icon="menu" class="h-100" ></ion-icon>
         </ion-button>
     </ion-buttons>
     <ion-buttons slot="end" v-if="!isMenu">
         <ion-button class="text-dark">
-            <Icon icon="clarity:notification-solid" height="20" />
+            <Icon icon="clarity:notification-solid" class="text-dark h-100"  />
         </ion-button>
     </ion-buttons>
     <ion-title class="head text16">

@@ -16,6 +16,12 @@ export default defineComponent({
     IonApp,
     IonRouterOutlet,
     Menu
+  },
+  created(){
+    if(this.$isLoggedIn != true){
+      this.$isLoggedIn = true;
+      this.$router.push('/login')
+    }
   }
 });
 </script>

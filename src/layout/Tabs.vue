@@ -3,7 +3,7 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button v-for="tab in tabs" :key="tab.name" :tab="'/'+tab.name" :href="tab.name">
+        <ion-tab-button v-for="tab in tabs" :key="tab.name" :tab="'/'+tab.name" @click="this.$router.push(tab.name)">
           <ion-icon :icon="tab.icon" />
             <ion-label class="ion-text-capitalize">
               {{ tab.name }}
