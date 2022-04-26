@@ -1,8 +1,8 @@
 <template>
 <ion-page>
     <app-header title="Fees" />
-    <ion-content :fullscreen="true" class="position-relative" >
-      <list-component title="Grand Total" class="text-center" bodyWidth="90%" height="20">
+    <ion-content class="position-relative" >
+      <list-component title="Grand Total" class="text-center fixed-top pt-5" bodyWidth="90%" height="20">
         <span class="ms-2">
           Amount<br>
           $56,000
@@ -63,8 +63,8 @@
                   </span>
             </span>
             <template v-slot:body-status>
-              <ion-badge color="success" v-if="fee.status==1" class="small text-light" >Paid</ion-badge>
-              <ion-badge color="danger" v-else class="small text-light" >Unpaid</ion-badge>
+              <ion-badge color="success" v-if="fee.status==1" class="small text-light text-sm                                                                                                                                                                                       " >Paid</ion-badge>
+              <ion-badge color="danger" v-else class="small text-light text-sm" >Unpaid</ion-badge>
           </template>
         </list-component>
       </ion-list>

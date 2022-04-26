@@ -18,10 +18,10 @@ export default defineComponent({
     Menu
   },
   created(){
-    if(this.$isLoggedIn != true){
-      this.$isLoggedIn = true;
-      this.$router.push('/login')
-    }
+    // if(this.$isLoggedIn != true){
+    //   this.$isLoggedIn = true;
+    //   this.$router.push('/login')
+    // }
   }
 });
 </script>

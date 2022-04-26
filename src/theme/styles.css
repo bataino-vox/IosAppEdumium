@@ -1,3 +1,6 @@
+.text-sm {
+    font-size:80% !important;
+}
 ion-item{
     --border-color:white !important;
 }

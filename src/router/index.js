@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import Tabs from '@/layout/Tabs.vue'
+import Profile from '@/views/Profile.vue'
 
 const routes = [
   {
@@ -37,8 +38,30 @@ const routes = [
     ]
   },
   {
+    path: '/',
+    component: () => import('@/views/Profile.vue')
+  },
+  {
     path: '/login',
     component: () => import('@/views/Login.vue')
+  },
+  {
+    path:'/profile',
+    redirect:'/profile/personal',
+  },
+  {
+    path: '/profile',
+    component: Profile,
+    children: [
+      {
+        path:'parent',
+        component: () => import('@/views/profile/Parent.vue')
+      },
+      {
+        path:':view',
+        component: () => import('@/views/profile/Other.vue')
+      },
+    ]
   }
 ]
 
