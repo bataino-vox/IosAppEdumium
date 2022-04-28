@@ -4,6 +4,7 @@ import router from './router';
 
 import { IonicVue } from '@ionic/vue';
 import Header from '@/layout/Header'
+import { Icon } from '@iconify/vue'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
@@ -33,6 +34,7 @@ const app = createApp(App)
   .use(IonicVue)
   .use(router)
   .component('app-header', Header)
+  .component('icon', Icon)
   
 router.isReady().then(() => {
   app.mount('#app');

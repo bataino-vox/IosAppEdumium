@@ -1,9 +1,9 @@
 <template>
-<div id="" class="d-block p-0 m-0 w-100 border ion-no-padding my-2" lines="" style="overflow:show" color="">
+<div id="" class="d-block p-0 m-0 w-100 shadow-sm  ion-no-padding my-2" lines="" style="overflow:show" color="">
     <div class="d-block small mx-0 px-0 w-100" style="">
-        <div class="d-flex justify-content-between w-100 bg-l-gray ps-2 w-100 mx-0 py-2 small px-1"> 
-            <span>
-                <Icon :icon="titleIcon" class='text-dark' height='15' v-if="titleIcon"/>
+        <div class="d-flex justify-content-between w-100 bg-l-gray px-2 w-100 mx-0 py-2 small px-1"> 
+            <span class="ps-1">
+                <icon :icon="titleIcon" class='text-dark' height='15' v-if="titleIcon"/>
                 {{ title }}
             </span>
             <span>
@@ -14,10 +14,10 @@
         </div>
         <div :class="smalltitle ? '': 'd-flex p-2'" class="w-100 bg-white " :style="'min-height:' + (height ?? '100px !important')">
             <div v-if="smalltitle" class="d-flex justify-content-between w-100 p-2 small" style="">
-                <span class="small">
+                <span class="small ps-2">
                     {{ smalltitle }}
                 </span>
-                <span>
+                <span class="pe-2">
                     <slot name="body-status"></slot>
                 </span>
             </div>
@@ -26,8 +26,8 @@
                     <slot></slot>
                 </div>
             </div>
-            <span v-if="!smalltitle">
-                <slot name="body-status"></slot>
+            <span v-if="!smalltitle" class="pe-2">
+                <slot name="body-status" ></slot>
             </span>
         </div>
     </div>
@@ -44,13 +44,12 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue';
+
 
 export default {
     name: 'ListComponent',
     props: ['title','height', 'bodyWidth','smalltitle','titleIcon'],
     components: {
-        Icon
     }
 };
 </script>

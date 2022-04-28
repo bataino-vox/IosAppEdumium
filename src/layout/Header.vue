@@ -1,6 +1,12 @@
 <template>
 <ion-toolbar class="salm">
-    <ion-buttons slot="start" v-if="isMenu">
+    <ion-buttons slot="start" v-if="backButton">
+        <ion-button class="icon-only" @click="this.$router.push('/home')">
+            <ion-icon :icon="arrowBack" class=""/>
+        </ion-button>
+        <ion-back-button defaultHref="/" class="ion-hide" mode="md" ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="start" v-else-if="isMenu">
          <ion-button class="icon-only" @click="closeSideMenu">
             <ion-icon :icon="arrowBack" class=""/>
         </ion-button>
@@ -10,9 +16,9 @@
             <ion-icon :icon="menu" class="h-100" ></ion-icon>
         </ion-button>
     </ion-buttons>
-    <ion-buttons slot="end" v-if="!isMenu">
+    <ion-buttons slot="end" v-if="!backButton">
         <ion-button class="text-dark">
-            <Icon icon="clarity:notification-solid" class="text-dark h-100"  />
+            <icon icon="clarity:notification-solid" class="text-dark h-100"  />
         </ion-button>
     </ion-buttons>
     <ion-title class="head text16">
@@ -24,18 +30,19 @@
 </template>
 
 <script>
-import { IonButtons, IonTitle, IonToolbar, menuController } from '@ionic/vue'
+import { IonBackButton, IonButtons, IonTitle, IonToolbar, menuController } from '@ionic/vue'
 import {menu, arrowBack} from 'ionicons/icons'
-import { Icon } from '@iconify/vue';
+
 
 export default {
     name: 'AppHeader',
-    props: ['title','isMenu'],
+    props: ['title','backButton','isMenu'],
     components: {
+        IonBackButton,
         IonButtons,
         IonTitle,
         IonToolbar,
-        Icon
+        
     },
     data(){
         return{

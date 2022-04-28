@@ -3,12 +3,12 @@
       <ion-content class="text-start">
         <div class="text-start" >
             <div class="d-flex justify-content-between text-start text-sm px-3 p-2" v-for="(detail,key,index) in details" :key="detail" :ke="index" style="max-width:300px">
-                <span class="" >
+                <div class="w-100" >
                     {{ key }} :
-                </span>
-                <span class="" >
+                </div>
+                <div class="text-start w-100" >
                     {{ detail }}
-                </span>
+                </div>
             </div>
         </div>
       </ion-content>

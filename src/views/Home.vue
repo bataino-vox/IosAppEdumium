@@ -4,7 +4,7 @@
     <ion-content :fullscreen="true">
       <ion-list>
         <ion-item class="mb-2" lines="full" v-for="dash in dashB" :key="dash.name" color="primary">
-          <Icon :icon="dash.icon" width="29" slot="start"/>
+          <icon :icon="dash.icon" width="29" slot="start"/>
           <ion-label>
             {{ dash.name }}<br>
             <ion-text class="text-muted small">
@@ -22,7 +22,7 @@
 
 <script>
 import { IonPage, IonContent } from '@ionic/vue';
-import { Icon } from '@iconify/vue';
+
 
 export default {
   name: 'HomeTab',
@@ -35,7 +35,7 @@ export default {
       ],
     }
   },
-  components: {  IonContent, IonPage, Icon }
+  components: {  IonContent, IonPage }
 };
 </script>
 

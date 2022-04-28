@@ -11,17 +11,17 @@
         <div class="d-flex ion-padding text-start" :title="index">
             <ion-label class="century ion-padding-end ion-text-wrap ion-text-sm" style="font-size:80%;">
                 <div >
-                    <Icon icon="ion:person" class="me-2" height="20"/>
+                    <icon icon="ion:person" class="me-2" height="20"/>
                     {{ parent.name }}
                 </div>
                 <br>
                  <div class="">
-                    <Icon icon="ion:call" class="me-2" height="20"/>
+                    <icon icon="ion:call" class="me-2" height="20"/>
                     {{ parent.tel }}
                 </div>
                 <br>
                  <div >
-                    <Icon icon="ion:briefcase" class="me-2" height="20"/>
+                    <icon icon="ion:briefcase" class="me-2" height="20"/>
                     {{ parent.occupation }}
                 </div>
             </ion-label>
@@ -37,32 +37,32 @@
         <div class="d-flex ion-padding text-start">
             <ion-label class="century ion-padding-end ion-text-wrap ion-text-sm" style="font-size:80%;">
                 <div >
-                    <Icon icon="ion:person" class="me-2" height="20"/>
+                    <icon icon="ion:person" class="me-2" height="20"/>
                     {{ guardian.name }}
                 </div>
                 <br>
                  <div >
-                    <Icon icon="ion:call" class="me-2" height="20"/>
+                    <icon icon="ion:call" class="me-2" height="20"/>
                     {{ guardian.tel }}
                 </div>
                 <br>
                  <div >
-                    <Icon icon="ion:briefcase" class="me-2" height="20"/>
+                    <icon icon="ion:briefcase" class="me-2" height="20"/>
                     {{ guardian.occupation }}
                 </div>
                 <br>
                  <div >
-                    <Icon icon="ion:accessibility" class="me-2" height="20"/>
+                    <icon icon="ion:accessibility" class="me-2" height="20"/>
                     {{ guardian.relation }}
                 </div>
                 <br>
                  <div >
-                    <Icon icon="ion:mail" class="me-2" height="20"/>
+                    <icon icon="ion:mail" class="me-2" height="20"/>
                     {{ guardian.mail }}
                 </div>
                 <br>
                  <div >
-                    <Icon icon="ion:location" class="me-2" height="20"/>
+                    <icon icon="ion:location" class="me-2" height="20"/>
                     {{ guardian.location }}
                 </div>
             </ion-label>
@@ -73,14 +73,14 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue'
+
 import { IonPage, IonContent } from '@ionic/vue';
 
 
 export default {
   name: 'ParentPage',
   components: {
-      Icon,
+     
       IonPage,
       IonContent
   },

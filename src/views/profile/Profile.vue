@@ -26,7 +26,7 @@
                       </ion-label>
                   </div>
               </div>
-          <ion-tab-bar slot="top" class="">
+          <ion-tab-bar slot="top" class="" color="primary">
                 <ion-tab-button @click="this.$router.push('/profile/personal')" class="ion-text-uppercase">
                     PERSONAL
                 </ion-tab-button>

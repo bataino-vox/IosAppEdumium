@@ -30,7 +30,7 @@
 
 <script>
 import { IonHeader, IonContent, IonBackButton, IonButtons, IonToolbar, IonMenu, IonList, IonItem, IonRouterOutlet } from '@ionic/vue';
-import { Icon } from '@iconify/vue';
+
 
 import { home, arrowBack, cash, person, easel, videocam, calendar, list, listSharp, statsChart, copy, wifi, hourglass, cloudDownload, clipboard, mail, newspaper, personAdd, book, gitNetwork, business, informationCircle, exit } from 'ionicons/icons'      
 export default {
@@ -45,7 +45,7 @@ export default {
         IonRouterOutlet,
         IonBackButton,
         IonButtons,
-        Icon
+        
     },
     data() {
         return {
@@ -87,7 +87,7 @@ export default {
                     status: 0,
                     short_code: "",
                     icon: videocam,
-                    link:'/bbb'
+                    link:'/classes'
                 },
                 {
                     name: "Time Table",
@@ -101,7 +101,7 @@ export default {
                     status: 0,
                     short_code: "",
                     icon: listSharp,
-                    link:'/lessonplan'
+                    link:'/lessons'
                 },
                 {
                     name: "Syllabus Status",
@@ -129,14 +129,14 @@ export default {
                     status: 0,
                     short_code: "",
                     icon: hourglass,
-                    link:'/applyleave'
+                    link:'/leave'
                 },
                 {
                     name: "Download Center",
                     status: 0,
                     short_code: "",
                     icon: cloudDownload,
-                    link:'/downloadcenter'
+                    link:'/download'
                 },
                 {
                     name: "Attendance",
