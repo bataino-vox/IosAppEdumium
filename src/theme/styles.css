@@ -4,6 +4,36 @@
 .text10 {
     font-size: 10px !important;
 }
+
+
+.source{
+    font-family: 'Source sans pro'
+}
+.roboto{
+    font-family: 'Roboto';
+}
+.bg-l-gray {
+    background-color: var(--ion-color-primary) !important;
+}
+/* VC CALENDAR  */
+.vc-header, .vc-arrows-container {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+.vc-header {
+    background-color: whitesmoke ;
+    margin: 4px !important;
+}
+.vc-arrows, .vc-svg-icon {
+    color: black !important ;
+}
+
+body {
+    overflow: hidden !important;
+}
+
+
+/* IONIC TAGS */
 ion-item{
     --border-color:white !important;
 }
@@ -25,16 +55,10 @@ ion-badge {
     --padding-end:5px;
     --box-shadow: none !important;
 }
-.source{
-    font-family: 'Source sans pro'
+ion-toast {
+    --background: black !important;
 }
-.roboto{
-    font-family: 'Roboto';
-}
-.bg-l-gray {
-    background-color: var(--ion-color-primary) !important;
-}
+/* OVERWRITE IONIC CLASSES */
 
-body {
-    overflow: hidden !important;
-}
+
+/* PSEUDO CLASSES */

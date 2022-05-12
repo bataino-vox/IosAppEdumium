@@ -1,6 +1,8 @@
 <template>
 <ion-page>
-    <app-header title="Fees" />
+    <ion-header>
+        <app-header title="Fees" />
+    </ion-header>
     <ion-content class="positio-relative" >
         <div slot="fixed" class="bg-white w-100">
             <list-component title="Grand Total"  class="text-center" bodyWidth="90%" height="20">
@@ -76,19 +78,12 @@
 
 <script>
 /* eslint-disable */ 
-import { IonPage,  IonContent, IonList, IonItem } from '@ionic/vue';
-
-import ListComponent from '@/components/ListComponent'
+import { IonBadge } from '@ionic/vue';
 
 export default {
     name: 'StudentFees',
     components: {
-        IonContent,
-        IonPage,
-        IonList,
-        IonItem,
-       
-        ListComponent,
+      IonBadge
     },
     data() {
         return {

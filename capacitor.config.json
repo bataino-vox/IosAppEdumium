@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "IosAppEdumium",
+	"appId": "com.voxsupport.edumium",
+	"appName": "Edumium",
 	"webDir": "dist",
 	"bundledWebRuntime": false
 }

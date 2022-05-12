@@ -8,6 +8,7 @@
 <script>
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import Menu from '@/layout/Menu.vue';
+// import { openLoading } from '@/functions/widget'
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -18,10 +19,15 @@ export default defineComponent({
     Menu
   },
   created(){
-    // if(this.$isLoggedIn != true){
-    //   this.$isLoggedIn = true;
-    //   this.$router.push('/login')
-    // }
+    const isLoggedIn = localStorage.getItem('token')
+    if(!isLoggedIn){
+      this.$router.push('/login')
+    }
+   
+  },
+  mounted(){
+  },
+  setup(){
   }
 });
 </script>

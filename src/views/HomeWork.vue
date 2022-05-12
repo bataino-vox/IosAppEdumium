@@ -59,19 +59,12 @@
 </template>
 
 <script>
-import { IonPage, IonHeader, IonContent, IonList } from '@ionic/vue';
-
-import ListComponent from '@/components/ListComponent'
+import { IonBadge } from '@ionic/vue';
 
 export default {
     name: 'HomeWork',
     components: {
-        IonHeader,
-        IonContent,
-        IonPage,
-        IonList,
-       
-        ListComponent
+       IonBadge
     },
     data() {
         return {

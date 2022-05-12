@@ -1,6 +1,8 @@
 <template>
 <ion-page>
-    <app-header title="Lesson Plan" :backButton="true" />
+     <ion-header>
+        <app-header title="Lesson Plan" :backButton="true" />
+    </ion-header>
     <ion-content>
         <div class="w-100 d-flex p-3 py-2 text-center justify-content-between" color="">
           <icon icon="ion:chevron-back" />
@@ -58,15 +60,13 @@
 </template>
 
 <script>
-import { IonPage,  IonContent } from '@ionic/vue';
-import ListComponent from '@/components/ListComponent.vue';
+import { IonRow,  IonCol } from '@ionic/vue';
 
 export default {
     name: 'LessonPaln',
     components: {
-        ListComponent,
-        IonContent,
-        IonPage,
+        IonRow,
+        IonCol,
     },
     data() {
         return {

@@ -17,13 +17,12 @@
 </template>
 
 <script>
-import { IonPage, IonHeader, IonContent } from '@ionic/vue';
-import ListComponent from '@/components/ListComponent.vue';
+import {  } from '@ionic/vue';
 
 
 export default {
   name: 'Tab3Page',
-  components: { ListComponent, IonHeader,  IonContent, IonPage },
+  components: {  },
    data() {
         return {
             notice: ['', '', {

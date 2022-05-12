@@ -1,6 +1,8 @@
 <template>
   <ion-page>
-    <app-header title="BBB Live Classes" :backButton="true" />
+     <ion-header>
+        <app-header title="BBB Live Classes" :backButton="true" />
+    </ion-header>
     <ion-content >
       <list-component title="Math Online Class" height="20" bodyWidth="150px" v-for="clas in classes" :key="clas">
             <template v-slot:header-end>
@@ -27,13 +29,11 @@
 </template>
 
 <script>
-import { IonPage,  IonContent } from '@ionic/vue';
-
-import ListComponent from '@/components/ListComponent.vue';
+import { IonBadge } from '@ionic/vue';
 
 export default {
   name: 'ExamPage',
-  components: { ListComponent,  IonContent, IonPage },
+  components: { IonBadge },
   data(){
     return {
       classes: ['','','','']

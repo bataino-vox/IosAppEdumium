@@ -18,8 +18,11 @@
         </div>
         <ion-list class="ion-no-padding century text12 ion-padding-vertical">
 
-            <ion-item lines="full" class="ion-text-capitalize menu-item" v-for="mod in modules" :key="mod.id" @click="this.$router.push(mod.link)">
-                <ion-icon :icon="mod.icon" /> {{ mod.name }}
+            <ion-item lines="full" class="ion-text-capitalize menu-item" v-for="mod in modules" :key="mod.id" @click=" mod.short_code == 'logout' ? this.logout() : this.$router.push(mod.link)">
+                <ion-icon :icon="mod.icon" /> 
+                <ion-label >
+                    {{ mod.name }}
+                </ion-label>
             </ion-item>
 
         </ion-list>
@@ -30,9 +33,10 @@
 
 <script>
 import { IonHeader, IonContent, IonBackButton, IonButtons, IonToolbar, IonMenu, IonList, IonItem, IonRouterOutlet } from '@ionic/vue';
-
-
 import { home, arrowBack, cash, person, easel, videocam, calendar, list, listSharp, statsChart, copy, wifi, hourglass, cloudDownload, clipboard, mail, newspaper, personAdd, book, gitNetwork, business, informationCircle, exit } from 'ionicons/icons'      
+import { openLoading, dismiss } from '@/functions/widget'
+import { logout } from '@/services/student'
+
 export default {
     name: 'SideMenu',
     compnents: {
@@ -199,7 +203,7 @@ export default {
                     status: 0,
                     short_code: "",
                     icon: business,
-                    link:'/hostel'
+                    link:'/hostels'
                 },
                 {
                     name: "About School",
@@ -211,14 +215,24 @@ export default {
                 {
                     name: "Logout",
                     status: 0,
-                    short_code: "",
+                    short_code: "logout",
                     icon: exit,
                     link:'/logout'
                 },
             ],
         }
     },
-    methods: {},
+    methods: {
+        async logout() {
+            openLoading()
+            const loggedOut = await logout()
+            if(loggedOut) {
+                localStorage.removeItem('token')
+                location.href = '/login'
+                dismiss()
+            }
+        }
+    },
     created() {},
     setup() {
         return {

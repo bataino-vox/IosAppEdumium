@@ -45,8 +45,8 @@ const routes = [
     component: () => import('@/views/Login.vue')
   },
   {
-    path:'/profile',
-    redirect:'/profile/personal',
+    path: '/profile',
+    redirect: '/profile/personal',
   },
 
 
@@ -56,11 +56,11 @@ const routes = [
     component: Profile,
     children: [
       {
-        path:'parent',
+        path: 'parent',
         component: () => import('@/views/profile/Parent.vue')
       },
       {
-        path:':view',
+        path: ':tab',
         component: () => import('@/views/profile/Other.vue')
       },
     ]
@@ -90,48 +90,52 @@ const routes = [
     component: () => import('@/views/OnlineExam.vue')
   },
   {
-  path: '/leave',
-  component: () => import('@/views/ApplyLeave.vue')
+    path: '/leave',
+    component: () => import('@/views/ApplyLeave.vue')
   },
   {
-  path: '/download',
-  component: () => import('@/views/DownloadCenter.vue')
+    path: '/download',
+    redirect: '/download/assignment'
   },
   {
-  path: '/attendance',
-  component: () => import('@/views/Attendance.vue')
+    path: '/download/:tab',
+    component: () => import('@/views/DownloadCenter.vue'),
   },
   {
-  path: '/leave',
-  component: () => import('@/views/OnlineExam.vue')
+    path: '/attendance',
+    component: () => import('@/views/Attendance.vue')
   },
   {
-  path: '/timeline',
-  component: () => import('@/views/Timeline.vue')
+    path: '/leave',
+    component: () => import('@/views/OnlineExam.vue')
   },
   {
-  path: '/doc',
-  component: () => import('@/views/MyDocuments.vue')
+    path: '/timeline',
+    component: () => import('@/views/Timeline.vue')
   },
   {
-  path: '/review',
-  component: () => import('@/views/TeacherReview.vue')
+    path: '/documents',
+    component: () => import('@/views/MyDocuments.vue')
   },
   {
-  path: '/library',
-  component: () => import('@/views/Library.vue')
+    path: '/reviews',
+    component: () => import('@/views/TeacherReview.vue')
   },
   {
-  path: '/route',
-  component: () => import('@/views/TransportRoute.vue')
+    path: '/library',
+    component: () => import('@/views/Library.vue')
   },
-  // {
-  // path: '/hostel',
-  // component: () => import('@/views/Hostel.vue')
-  // },
   {
-  path: '/about',
-  component: () => import('@/views/OnlineExam.vue')
+    path: '/routes',
+    component: () => import('@/views/TransportRoute.vue')
+  },
+  {
+  path: '/hostels',
+  component: () => import('@/views/Hostel.vue')
+  },
+  {
+    path: '/about',
+    component: () => import('@/views/About.vue')
   }
 ]
 

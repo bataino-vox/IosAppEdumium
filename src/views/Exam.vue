@@ -1,6 +1,8 @@
 <template>
   <ion-page>
-    <app-header title="Examination" />
+    <ion-header>
+      <app-header title="Examination" />
+    </ion-header>
     <ion-content :fullscreen="true">
       <list-component title="MONTHLY TEST" smalltitle=" " titleIcon="healthicons:i-exam-qualification" v-for="exam in exams" :key="exam" height="20">
           <template v-slot:body-status>
@@ -19,13 +21,11 @@
 </template>
 
 <script>
-import { IonPage, IonContent } from '@ionic/vue';
-import ListComponent from '@/components/ListComponent.vue';
 
 
 export default {
   name: 'ExamPage',
-  components: { ListComponent,  IonContent, IonPage},
+  components: { },
   data() {
       return {
           exams: ['', '', {
